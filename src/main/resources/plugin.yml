@@ -1,0 +1,5 @@
+name: Messages
+version: '0.0.1'
+main: com.github.triikow.messages.Messages
+api-version: '1.21'
+authors: [ triikow ]
