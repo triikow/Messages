@@ -7,7 +7,13 @@ public final class Messages extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
+        if (getServer().getPluginManager().isPluginEnabled("PlaceholderAPI")) {
+            getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
+        }
+        else {
+            getLogger().warning("Could not find PlaceholderAPI. This plugin is required.");
+            getServer().getPluginManager().disablePlugin(this);
+        }
     }
 
 }

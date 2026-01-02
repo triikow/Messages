@@ -1,5 +1,8 @@
 name: Messages
 version: '0.0.1'
+authors: [ triikow ]
+
+softdepend: ["PlaceholderAPI"]
+
 main: com.github.triikow.messages.Messages
 api-version: '1.21'
-authors: [ triikow ]

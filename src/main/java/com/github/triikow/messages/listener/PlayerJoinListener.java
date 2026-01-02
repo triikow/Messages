@@ -1,6 +1,6 @@
 package com.github.triikow.messages.listener;
 
-import org.bukkit.entity.Player;
+import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -12,8 +12,8 @@ public class PlayerJoinListener implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        final Player player = event.getPlayer();
-
-        event.joinMessage(mm("<b><aqua>" + player.getName() + "</aqua></b> <yellow>joined the server!</yellow>"));
+        String joinMessage = "<b><aqua>%player_name%</aqua></b> <yellow>joined the server!";
+        joinMessage = PlaceholderAPI.setPlaceholders(event.getPlayer(), joinMessage);
+        event.joinMessage(mm(joinMessage));
     }
 }
