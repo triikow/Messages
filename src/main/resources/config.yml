@@ -1,3 +1,16 @@
+# --- --- --- --- #
+# Messages plugin #
+# --- --- --- --- #
+
+# This plugin uses PlaceholderAPI for message variables.
+# - You can find the full list of available placeholders here: https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Placeholders
+# - NOTE: You must manually install expansions to use them (e.g., run /papi ecloud download Player and /papi reload).
+
+# Message formatting is powered by MiniMessage.
+# - Documentation: https://docs.advntr.dev/minimessage/format.html
+# - Use tags like <red>, <bold>, or <gradient:red:blue> for modern styling.
+# - Preview your messages here: https://webui.advntr.dev/
+
 join-quit:
   first-join-message: "<b><aqua>%player_name%</aqua></b> <yellow>joined the server for <b>the first time</b>!"
   join-message: "<b><aqua>%player_name%</aqua></b> <yellow>joined the server!"
