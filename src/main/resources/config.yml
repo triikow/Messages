@@ -1,3 +1,4 @@
 join-quit:
+  first-join-message: "<b><aqua>%player_name%</aqua></b> <yellow>joined the server for <b>the first time</b>!"
   join-message: "<b><aqua>%player_name%</aqua></b> <yellow>joined the server!"
   quit-message: "<b><aqua>%player_name%</aqua></b> <yellow>left the server!"

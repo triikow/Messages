@@ -19,7 +19,13 @@ public class PlayerJoinListener implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        String joinMessage = plugin.getConfig().getString("join-quit.join-message");
+        String joinMessage;
+        if (event.getPlayer().hasPlayedBefore()) {
+            joinMessage = plugin.getConfig().getString("join-quit.join-message");
+        }
+        else {
+            joinMessage = plugin.getConfig().getString("join-quit.first-join-message");
+        }
 
         if (joinMessage != null) {
             joinMessage = PlaceholderAPI.setPlaceholders(event.getPlayer(), joinMessage);
