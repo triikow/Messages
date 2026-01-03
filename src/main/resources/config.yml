@@ -1,2 +1,3 @@
 join-quit:
   join-message: "<b><aqua>%player_name%</aqua></b> <yellow>joined the server!"
+  quit-message: "<b><aqua>%player_name%</aqua></b> <yellow>left the server!"
